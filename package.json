@@ -15,13 +15,8 @@
     "test": "yarn run test:node && yarn run test:browser && yarn run lint",
     "build": "webpack",
     "watch": "webpack --watch",
-    "prepublishOnly": "yarn run build"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn run lint"
-    }
+    "prepublishOnly": "yarn run build",
+    "prepare": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
