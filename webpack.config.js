@@ -1,20 +1,19 @@
 const path = require("path");
 
 module.exports = {
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  devtool: 'none',
+  mode: "production",
   entry: path.resolve(__dirname, "src/index.js"),
   output: {
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, "lib"),
     filename: "react-optimize.js",
     library: "react-optimize",
-    libraryTarget: 'umd',
+    libraryTarget: "umd",
     umdNamedDefine: true,
-    globalObject: 'this'
+    globalObject: "this",
   },
   externals: {
-    react: 'react',
-    "prop-types": "prop-types"
+    react: "react",
+    "prop-types": "prop-types",
   },
   module: {
     rules: [
@@ -22,9 +21,9 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
-  }
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
 };
