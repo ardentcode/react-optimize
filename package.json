@@ -15,8 +15,7 @@
     "test": "yarn run test:node && yarn run test:browser && yarn run lint",
     "build": "webpack",
     "watch": "webpack --watch",
-    "prepublishOnly": "yarn run build",
-    "prepare": "webpack"
+    "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
